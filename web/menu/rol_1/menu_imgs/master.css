@@ -1,0 +1,131 @@
+TABLE {
+	FONT-SIZE: 7pt; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+BODY {
+	FONT-SIZE: 7pt; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	background-image:url(../imgs/fond1.gif);
+background-repeat:repeat-x;
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+SELECT {
+	FONT-SIZE: 7pt; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A:active {
+	FONT-SIZE: 7pt; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 7pt; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:link {
+	FONT-SIZE: 7pt; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 7pt; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.BotonForm {
+	BORDER-RIGHT: #6b8594 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ced7db 2px solid; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #ced7db 2px solid; CURSOR: hand; COLOR: #ffffff; PADDING-TOP: 0px; BORDER-BOTTOM: #6b8594 2px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #9eaeb8; TEXT-DECORATION: none
+}
+.Achicador1 {
+	FONT-SIZE: 2px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.PiePagina {
+	FONT-SIZE: 7pt; COLOR: #6893ac; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.PiePagina A:link {
+	FONT-SIZE: 7pt; COLOR: #6893ac; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.PiePagina A:visited {
+	FONT-SIZE: 7pt; COLOR: #6893ac; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.PiePagina A:hover {
+	FONT-SIZE: 7pt; COLOR: #6893ac; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.PiePagina A:active {
+	FONT-SIZE: 7pt; COLOR: #6893ac; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.br0Fondo {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/br0_fdo_1.gif); BACKGROUND-REPEAT: repeat-x
+}
+.br0BtFondo {
+	BACKGROUND-POSITION: left top; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(images/br0_bt_fdo.gif); PADDING-BOTTOM: 1px; CURSOR: hand; COLOR: #009900; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none; moz-user-select: none
+}
+.br0BtFondoIzq {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/br0_bt_izq.gif); BACKGROUND-REPEAT: no-repeat
+}
+.br0BtFondoDer {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(images/br0_bt_der.gif); BACKGROUND-REPEAT: no-repeat
+}
+.br1Fondo {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/br1_fdo.gif); BACKGROUND-REPEAT: repeat-y
+}
+.br1FondoTop {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/br1_fdo_top.gif); BACKGROUND-REPEAT: no-repeat
+}
+.br1FondoItemsMenu {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #fffbea
+}
+DIV.tree {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px; PADDING-TOP: 0px
+}
+.br1MenuAbierto .tree {
+	DISPLAY: block
+}
+.br1MenuCerrado .tree {
+	DISPLAY: none
+}
+.br1MenuAbierto .btHabilitar {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/br1_menu_bt_1.gif); CURSOR: hand; BACKGROUND-REPEAT: no-repeat; moz-user-select: none
+}
+.br1MenuCerrado .btHabilitar {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/br1_menu_bt_0.gif); CURSOR: hand; BACKGROUND-REPEAT: no-repeat; moz-user-select: none
+}
+.br1MenuTitulo {
+	FONT-SIZE: 9pt; CURSOR: hand; COLOR: #747474; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; moz-user-select: none
+}
+.br1ItemMenu {
+	FONT-SIZE: 9pt; CURSOR: hand; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; moz-user-select: none
+}
+.br1ItemMenuIndex {
+	FONT-SIZE: 9pt; CURSOR: hand; COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; moz-user-select: none
+}
+.LnHorizTit_mod {
+	BORDER-TOP: #ffcc00 1px solid
+}
+.Recuadro_mod {
+	BORDER-RIGHT: #ffeeaa 1px solid; BORDER-TOP: #ffeeaa 1px solid; BORDER-LEFT: #ffeeaa 1px solid; BORDER-BOTTOM: #ffeeaa 1px solid; BACKGROUND-COLOR: #fffdf4
+}
+.TitPrincipal_mod {
+	FONT-SIZE: 13pt; PADDING-BOTTOM: 3px; COLOR: #5b8fc4; PADDING-TOP: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.Txt7_mod {
+	FONT-SIZE: 7pt; COLOR: #5b8fc4; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.Txt8_mod {
+	FONT-SIZE: 8pt; COLOR: #5b8fc4; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.Txt9_mod {
+	FONT-SIZE: 9pt; COLOR: #5b8fc4; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.Txt10_mod {
+	FONT-SIZE: 10pt; COLOR: #5b8fc4; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.Txt11_mod {
+	FONT-SIZE: 11pt; COLOR: #5b8fc4; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.brFormFondo_mod {
+	BACKGROUND-POSITION: left top; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(images/bt_form_fdo_verde.gif); PADDING-BOTTOM: 1px; CURSOR: hand; COLOR: #009900; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none; moz-user-select: none
+}
+.brFormIzq_mod {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/bt_form_izq_verde.gif); BACKGROUND-REPEAT: no-repeat
+}
+.brFormDer_mod {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(images/bt_form_der_verde.gif); BACKGROUND-REPEAT: no-repeat
+}
+.fdoTablaStatsIndex {
+	BACKGROUND-COLOR: #99badb
+}
