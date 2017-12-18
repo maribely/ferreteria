@@ -5,11 +5,7 @@
 
 
 <% 
-    String level= (String) request.getSession().getAttribute("usuario_privilegio");
-    String levelname = "";
-    if (level.equals("1")) levelname="Administrador";
-    if (level.equals("2")) levelname="Usuario";
-    System.out.println("menu.jsp | privilegio: "+level+" "+levelname);
+    String privilegio= (String) request.getSession().getAttribute("usuario_privilegio");
     String logo="sinlogo.gif";
 %>
 
@@ -353,7 +349,7 @@ function makeMenu2(type,text,lnk,target,end){
   <tr>
     <td height="6" align="center" valign="top" class="user">
 
-    <%= levelname %>  	
+    <%= privilegio %>  	
     </td>
   </tr>
 </table>

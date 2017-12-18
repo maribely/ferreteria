@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.submit.ferreteria.common.data.*;
-import org.submit.ferreteria.mod_ferreteria.entity.Cliente;
+import org.submit.ferreteria.entity.Cliente;
 
 /**
  *

@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List; 
 import org.submit.ferreteria.common.data.*;
-import org.submit.ferreteria.mod_ferreteria.entity.Producto;
+import org.submit.ferreteria.entity.Producto;
 
 
 /**

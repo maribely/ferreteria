@@ -8,19 +8,19 @@
   //Rojitas
   var control=1;
   function display(obj){
-	if(control==1){
-		parent.hiden.cols="21,*";
-		parent.menu.scrolling="auto";
-		control=0;
-		//obj.style.background='beige url(net-inf/img/homeOver.gif) no-repeat top center';
-		obj.value=">>";
-	}else{
-		parent.hiden.cols="200,*";
-		parent.menu.scrolling="auto";
-		control=1;
-		//obj.style.background='beige url(net-inf/img/logoutOver.gif) no-repeat top center';
-		obj.value="<<";
-	}
+        if(control==1){
+                   parent.hiden.cols="21,*";
+                   parent.menu.scrolling="auto";
+                   control=0;
+                   //obj.style.background='beige url(net-inf/img/homeOver.gif) no-repeat top center';
+                   obj.value=">>";
+        }else{
+                   parent.hiden.cols="200,*";
+                   parent.menu.scrolling="auto";
+                   control=1;
+                   //obj.style.background='beige url(net-inf/img/logoutOver.gif) no-repeat top center';
+                   obj.value="<<";
+        }
   }
 
   function hiddenframe(){
@@ -77,9 +77,8 @@
             <td colspan="1" align="right" class="copy">
             <% 
             String usuario = (String) request.getSession().getAttribute("usuario");
-            String usuario_nombres = (String) request.getSession().getAttribute("usuario_nombres");
             if(usuario!=null){
-                out.print("Bienvenido: <b>"+usuario+" ("+usuario_nombres+")</b> <a href='../../logout.jsp'>Cerrar sesión</a>");
+                out.print("Bienvenido: <b>"+usuario+"</b> <a href='../../logout.jsp'>Cerrar sesión</a>");
             }else{
                 out.print("Usuario: <b>Anónimo</b> <a href='../../autentica.jsp' target='_top'>Iniciar sesión</a>");
             }

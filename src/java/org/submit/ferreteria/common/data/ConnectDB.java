@@ -28,10 +28,10 @@ public class ConnectDB {
             try {//obtener conexion
                 //String sc="jdbc:sqlserver://localhost:1433;databaseName=Omaped;user=sa;password=12345;";
 		//Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-                    String sc="jdbc:postgresql://localhost:5432/ferreteria?user=postgres&password=61580745"; // viene ser la contraseaña de posgre
-                    Class.forName("org.postgresql.Driver");
-//		String sc="jdbc:mysql://localhost:3306/ferreteria?user=root&password=123456";
-//		Class.forName("com.mysql.jdbc.Driver");
+//                    String sc="jdbc:postgresql://localhost:5432/ferreteria?user=postgres&password=61580745"; // viene ser la contraseaña de posgre
+//                    Class.forName("org.postgresql.Driver");
+                  String sc="jdbc:mysql://localhost:3306/ferreteriadb?user=root&password=123456";
+                  Class.forName("com.mysql.jdbc.Driver");
                 //String sc="jdbc:oracle:thin:@//localhost:1521:ora11i?user=scott&password=tiger";//Thin driver
                 //Class.forName ("oracle.jdbc.driver.OracleDriver");
 		conn = DriverManager.getConnection(sc);
@@ -77,7 +77,7 @@ public class ConnectDB {
             Statement stmt = sql.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(SQL);
             while (rs.next()) {
-                System.out.println(rs.getString("nombres") + " " + rs.getString("usuario"));
+                System.out.println("==> "+ rs.getString("usuario")+" conectado!!!");
             }
             sql.close();  
             sql.getConnection();
