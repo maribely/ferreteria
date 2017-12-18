@@ -34,7 +34,7 @@ public class ConnectDB {
                   Class.forName("com.mysql.jdbc.Driver");
                 //String sc="jdbc:oracle:thin:@//localhost:1521:ora11i?user=scott&password=tiger";//Thin driver
                 //Class.forName ("oracle.jdbc.driver.OracleDriver");
-		conn = DriverManager.getConnection(sc);
+                    conn = DriverManager.getConnection(sc);
 //                SQLServerDataSource ds = new SQLServerDataSource(); //para que soporte pool
 //                //ds.setIntegratedSecurity(true);
 //                ds.setServerName(server);

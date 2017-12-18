@@ -1,7 +1,7 @@
 <%@ include file="../../include.jsp" %>
 <//util:session validate="true" name="sesion_2" key="2"/>
-<%@ page import="org.submit.ferreteria.mod_ferreteria.entity.Cliente"%>
-<%@ page import="org.submit.ferreteria.mod_ferreteria.data.ClienteData"%>
+<%@ page import="org.submit.ferreteria.entity.Cliente"%>
+<%@ page import="org.submit.ferreteria.dao.ClienteDAO"%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -21,12 +21,12 @@
   <table border='0' id="articulo"  cellspacing='2' cellpadding='1' align="center" >
       <caption>REPORTE DE CLIENTES</caption>
     <tr>
-        <th># </th><th>Nombre</th><th>Apellidos</th> <th>DNI</th><th>Email</th><th>Telefono</th> <th>Género</th>
+        <th># </th><th>Nombres</th><th>Apellidos</th> <th>DNI</th><th>Género</th><th>Email</th><th>Telefono</th><th>Dirección</th>
     </tr>
     <%  int i=0;
         try{
-            ClienteData data=new ClienteData();
-            List lis = data.listByFilter("");
+            ClienteDAO dao=new ClienteDAO();
+            List lis = dao.listarCliente("");
             Iterator lisIterator = lis.iterator();
             while(lisIterator.hasNext()) {
                 Cliente p = (Cliente) lisIterator.next();
@@ -35,18 +35,19 @@
         fprolloverstyle="color:#FFFFFF;background-color:#CDDBEB;"
         onClick="rollIn(this)" onDblClick="limpiar(this)" onMouseOver="rollIn(this)" onMouseOut="rollOut(this)" >
         <td align="right"><i><%=++i%></i></td>
-        <td><%=p.getNombre()%></td>
-        <td><%=p.getApellido()%></td>
+        <td><%=p.getNombres()%></td>
+        <td><%=p.getApellidos()%></td>
         <td align="rigth"><%=p.getDni()%></td>
-        <td align="rigth"><%=p.getE_mail()%></td>
-        <td align="rigth"><%=p.getTelefono()%></td>
         <td align="rigth"><%=p.getSexo()%></td>
+        <td align="rigth"><%=p.getEmail()%></td>
+        <td align="rigth"><%=p.getTelefono()%></td>
+        <td align="rigth"><%=p.getDireccion()%></td>
     </tr>
     <%      }
         }catch(GlobalException e){
             throw new GlobalException(""+e.getMessage());
         }
-        if(i==0) out.print("<br><br><b>0 Registros Encontradossssss</b>");
+        if(i==0) out.print("<br><br><b>0 Registros Encontrados</b>");
     %>
   </table>
 </body>

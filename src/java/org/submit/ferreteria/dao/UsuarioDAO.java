@@ -77,12 +77,12 @@ public class UsuarioDAO {
         return lis;
     }
     
-//    public static void main(String[] args) throws GlobalException {
-//        UsuarioDAO dao = new UsuarioDAO();
-//        
-//        System.out.println("+++++++++++++++");
-//        Usuario u = dao.loginUsuario("admin", "12345");
-//        System.out.println(u.getUsuario() +" " +u.getPrivilegio_nombre());
-//        System.out.println("+++++++++++++++");
-//    }
+    public static void main(String[] args) throws GlobalException {
+        UsuarioDAO dao = new UsuarioDAO();
+        
+        System.out.println("+++++++++++++++");
+        Usuario u = dao.loginUsuario("admin", "12345");
+        System.out.println(u.getUsuario() +" " +u.getPrivilegio_nombre());
+        System.out.println("+++++++++++++++");
+    }
 }

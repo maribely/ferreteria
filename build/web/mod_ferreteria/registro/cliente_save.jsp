@@ -1,7 +1,7 @@
 <%@ include file="../../include.jsp" %>
 <//util:session validate="true" name="sesion_2" key="2"/>
-<%@ page import="org.submit.ferreteria.mod_ferreteria.entity.Cliente"%>
-<%@ page import="org.submit.ferreteria.mod_ferreteria.data.ClienteData"%>
+<%@ page import="org.submit.ferreteria.entity.Cliente"%>
+<%@ page import="org.submit.ferreteria.dao.ClienteDAO"%>
 <html>
 <head>
     
@@ -18,49 +18,47 @@ String go=request.getParameter("go")==null ? "":request.getParameter("go");
 int id_cliente=request.getParameter("id_cliente")== null ? 0:Integer.parseInt(request.getParameter("id_cliente"));
 
 Cliente d=new Cliente();
+ClienteDAO dao=new ClienteDAO();
 
 //d.setUsuario_id(Integer.parseInt( request.getSession().getAttribute("usuario_id").toString() ));
 //out.print(d.getNombre());//quitar
 System.out.println("Acción="+ go);
 if( go.equals("Crear") )
     try{
-        d.setNombre(request.getParameter("nombre"));
-        d.setApellido(request.getParameter("apellidos"));
+        d.setNombres(request.getParameter("nombre"));
+        d.setApellidos(request.getParameter("apellidos"));
+        d.setDni(request.getParameter("dni"));
         d.setSexo(request.getParameter("sexo"));
-        d.setDni(Integer.parseInt(request.getParameter("dni")));
-        d.setTelefono(request.getParameter("telefono")== ""?0:Integer.parseInt(request.getParameter("telefono")));
+        d.setEmail(request.getParameter("email"));
         d.setRuc(request.getParameter("ruc"));
-        d.setE_mail(request.getParameter("e_mail"));
+        d.setTelefono(request.getParameter("telefono"));
         d.setDireccion(request.getParameter("direccion"));
-        
-        ClienteData data=new ClienteData();
-        resp+=""+data.create(d)+" reg. create in cliente ";
+                
+        resp+=""+dao.create(d)+" reg. create in cliente ";
     }catch(GlobalException e){
-        throw new GlobalException(""+e.getMessage());
+        throw new GlobalException(e.getMessage());
     }
 
 if( go.equals("Editar") )
     try{ 
         d.setId_cliente(id_cliente);
-        d.setNombre(request.getParameter("nombre"));
-        d.setApellido(request.getParameter("apellidos"));
+        d.setNombres(request.getParameter("nombre"));
+        d.setApellidos(request.getParameter("apellidos"));
+        d.setDni(request.getParameter("dni"));
         d.setSexo(request.getParameter("sexo"));
-        d.setDni(Integer.parseInt(request.getParameter("dni")));
-        d.setTelefono(request.getParameter("telefono")== ""?0:Integer.parseInt(request.getParameter("telefono")));
+        d.setEmail(request.getParameter("email"));
         d.setRuc(request.getParameter("ruc"));
-        d.setE_mail(request.getParameter("e_mail"));
+        d.setTelefono(request.getParameter("telefono"));
         d.setDireccion(request.getParameter("direccion"));
 
-        ClienteData data=new ClienteData();
-        resp+=""+data.update(d)+" reg. edit in cliente ";
+        resp+=""+dao.update(d)+" reg. edit in cliente ";
     }catch(GlobalException e){
         throw new GlobalException(""+e.getMessage());
     }
 if( go.equals("Eliminar") )
     try{ 
         System.out.println(go+"==>"+id_cliente);
-        ClienteData data=new ClienteData();
-        resp+=""+data.delete(id_cliente)+" reg. remove of cliente ";
+        resp+=""+dao.delete(id_cliente)+" reg. remove of cliente ";
     }catch(GlobalException e){
         throw new GlobalException(""+e.getMessage());
     }
