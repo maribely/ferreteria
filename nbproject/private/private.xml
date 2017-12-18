@@ -3,17 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/mod_ferreteria/data/ClienteData.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/dao/UsuarioDAO.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/entity/Proveedor.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/entity/Usuario.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/entity/Categoria.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/entity/Privilegio.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/web/autentica.jsp</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/mod_config/entity/Usuario.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/entity/Factura.java</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/docs/ferreteriadb.PNG</file>
-            <file>file:/D:/javadev/ferreteria/ferreteria/src/java/org/submit/ferreteria/entity/Producto.java</file>
+            <file>file:/C:/Users/ruth/Documents/NetBeansProjects/ferreteria/src/java/org/submit/ferreteria/common/data/ConnectDB.java</file>
+            <file>file:/C:/Users/ruth/Documents/NetBeansProjects/ferreteria/src/java/org/submit/ferreteria/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/ruth/Documents/NetBeansProjects/ferreteria/docs/ferreteriadb.sql</file>
         </group>
     </open-files>
 </project-private>
