@@ -10,12 +10,13 @@ package org.submit.ferreteria.entity;
  * @author hikaru
  */
 public class Usuario {
-        int id_usuario;
-        String usuario;
-        String contrasenia;
-        int id_privilegio;
-        String privilegio_nombre; // Solo como auxiliar
-        
+
+    int id_usuario;
+    String usuario;
+    String contrasenia;
+    int id_privilegio;
+    String privilegio_nombre; // Solo como auxiliar
+
     public Usuario() {
     }
 
@@ -42,8 +43,7 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-    
-    
+
     public int getId_privilegio() {
         return id_privilegio;
     }
@@ -59,5 +59,5 @@ public class Usuario {
     public void setPrivilegio_nombre(String privilegio_nombre) {
         this.privilegio_nombre = privilegio_nombre;
     }
-        
+
 }

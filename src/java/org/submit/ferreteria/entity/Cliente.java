@@ -11,14 +11,14 @@ package org.submit.ferreteria.entity;
  */
 public class Cliente {
     int id_cliente;
-    String nombres;
-    String apellidos;
-    String dni;
-    String sexo;
-    String email;
-    String ruc;
-    String telefono;
-    String direccion;
+    String nombres = "";
+    String apellidos = "";
+    String dni = "";
+    String sexo = "";
+    String email = "";
+    String ruc = "";
+    String telefono = "";
+    String direccion = "";
 
     public Cliente() {
     }

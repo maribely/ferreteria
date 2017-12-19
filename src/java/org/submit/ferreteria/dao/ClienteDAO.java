@@ -26,7 +26,7 @@ public class ClienteDAO {
     public List<Cliente> listarCliente(String filter) throws GlobalException { //select convert(varchar, getdate(), 103) 
         List<Cliente> lis = new ArrayList<>();
         try {
-            qry = "SELECT  * FROM cliente WHERE  UPPER(nombres) LIKE UPPER(?) ";
+            qry = "SELECT  * FROM cliente WHERE  UPPER(apellidos) LIKE UPPER(?) ";
             PreparedStatement ps = tran.getConnection().prepareStatement(qry);
             ps.setString(1, filter + "%");
             ResultSet rs = ps.executeQuery();
@@ -105,7 +105,7 @@ public class ClienteDAO {
         int r = 0;
         try {
             int i = 0;
-            qry = " INSERT INTO cliente (nombres,apellidos,dni,sexo,email,ruc,telefono,direccion) VALUES (?,?,?,?,?,?,?,?)";
+            qry = "INSERT INTO cliente (nombres,apellidos,dni,sexo,email,ruc,telefono,direccion) VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement ps = tran.getConnection().prepareStatement(qry);
             ps.setString(++i, cli.getNombres());
             ps.setString(++i, cli.getApellidos());

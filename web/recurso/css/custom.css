@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/12/2017, 10:56:07 PM
+    Author     : hikaru
+*/
+.c-field {
+    width: 100%;
+    padding: 10px 8px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}*/
+
+.c-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.c-btn-blue {background-color: #008CBA;} /* Blue */
+.c-btn-red {background-color: #f44336;} /* Red */ 
+.c-btn-gray {background-color: #e7e7e7; color: black;} /* Gray */ 
+.c-btn-black {background-color: #555555;} /* Black */
+
+/*input[type=submit]:hover {
+    background-color: #45a049;
+}*/
+
+.c-form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.c-container{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.c-container-short{
+    padding: 0px 20%;
+}

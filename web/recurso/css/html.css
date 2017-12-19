@@ -1,8 +1,8 @@
 body {
- margin: 0 auto;
- background-image: url("../foto/amazonas.jpg");
- background-repeat: no-repeat;
- background-size: 100% 720px;
+    margin: 0 auto;
+    background-image: url("../foto/amazonas.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 720px;
 }
 
 .error {
@@ -274,7 +274,18 @@ td  {
 .blanco  {
     background-color:#ffffff ; /* CDDBEB fffaf2 F7F7F8 F2FBFF fffaf2*/
 }
-
+.text-acent{
+    color: #F5F5FF;
+}
+.text-warm{
+    color: darkorange;
+}
+.text-info{
+    color:darkturquoise
+}
+.text-primary{
+    color:blueviolet;
+}
 .right{
     text-align: right;
 }
@@ -295,7 +306,7 @@ td  {
     font-size: 65%;
     COLOR: #000000;
     FONT-FAMILY: verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none;
-        margin: 0px 0;
+    margin: 0px 0;
     padding: 2px 0 8 0;
 }
 
@@ -349,11 +360,13 @@ td  {
 }
 
 .copy {
-    FONT-SIZE: 10px; COLOR: #801840; FONT-FAMILY: Geneva, Arial, Helvetica, san-serif
+    font-size: 12px; 
+    color:  lightcyan;
+    font-family: Geneva, Arial, Helvetica, san-serif;
 }
 
-A:link {
-    TEXT-DECORATION: none;
+a:link {
+   text-decoration: none;
 }
 .a {
     text-decoration : none;
