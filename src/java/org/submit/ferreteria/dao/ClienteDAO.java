@@ -70,7 +70,7 @@ public class ClienteDAO {
                 d.setDireccion(rs.getString("direccion"));              
             }
         } catch (GlobalException | SQLException e) {
-            throw new GlobalException("ClienteData.findByPk " + e.getMessage());
+            throw new GlobalException("ClienteDAO.findByPk " + e.getMessage());
         } finally {
             tran.close();
         }

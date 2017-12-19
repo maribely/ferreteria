@@ -10,8 +10,9 @@ package org.submit.ferreteria.entity;
  * @author SISTEMAS
  */
 public class Categoria {
+
     int id_categoria;
-    String nombre;
+    String nombre="";
 
     public Categoria() {
     }
@@ -31,6 +32,5 @@ public class Categoria {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
+
 }

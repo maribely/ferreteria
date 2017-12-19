@@ -4,7 +4,6 @@
    Author     : hikaru
 --%>
 <%@ include file="../../include.jsp" %>
-<%@page import="org.submit.ferreteria.common.data.GlobalException"%>
 <%@page import="org.submit.ferreteria.dao.ClienteDAO"%>
 <%@page import="org.submit.ferreteria.entity.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

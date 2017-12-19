@@ -10,10 +10,11 @@ package org.submit.ferreteria.entity;
  * @author SISTEMAS
  */
 public class Proveedor {
+
     int id_proveedor;
-    String  razon_social;
-    String ruc;
-    String direccion;
+    String razon_social = "";
+    String ruc = "";
+    String direccion = "";
 
     public Proveedor() {
     }
@@ -49,5 +50,5 @@ public class Proveedor {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-   
+
 }

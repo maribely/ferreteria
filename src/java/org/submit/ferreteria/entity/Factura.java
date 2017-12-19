@@ -10,9 +10,9 @@ package org.submit.ferreteria.entity;
  * @author SISTEMAS
  */
 public class Factura {
-    
+
     int id_factura;
-    String fecha;
+    String fecha = "";
     float sub_total;
     float igv;
     float total;
