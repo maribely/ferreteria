@@ -549,9 +549,9 @@
             //makeMenu('sub','&nbsp;<img src=imgs/flecha1.gif border=0> Reporte','../../mod_ferreteria/reportes/discap_main.jsp')
             makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> Cliente', '../../mod_ferreteria/cliente/main.jsp');
             makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> Categoria', '../../mod_ferreteria/categoria/main.jsp');
-            makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> proveedor.', '../../mod_ferreteria/proveedor/main.jsp');
-            makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> Productos.', '../../mod_ferreteria/producto/main.jsp');
-            makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> Factura.', '../../mod_ferreteria/factura/main.jsp');
+            makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> proveedor', '../../mod_ferreteria/proveedor/main.jsp');
+            makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> Productos', '../../mod_ferreteria/producto/main.jsp');
+            makeMenu('sub', '&nbsp;<img src=imgs/flecha1.gif border=0> Factura', '../../mod_ferreteria/factura/main.jsp');
 
 
 

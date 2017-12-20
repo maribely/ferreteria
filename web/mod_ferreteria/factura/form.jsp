@@ -40,42 +40,63 @@
             <form action='save.jsp' name='fm' method='post' onsubmit='return enviar()'>
                 <input type='hidden' class='txt' name='go' value='<%=go%>'>
                 <input type='hidden' class='txt' name='id' value='<%=d.getId_factura()%>'>
+                <div class="row">
+                    <div class="col-6">
+                        <label>Cliente *</label>
+                        <select name="id_cliente" class="c-field">
+                            <%
+                                ClienteDAO cdao = new ClienteDAO();
+                                List list = cdao.listarCliente("");
+                                Iterator it = list.iterator();
+                                do {
+                                    Cliente p = (Cliente) it.next();
+                                    if (go.equals("Editar")) {
+                                        if (p.getId_cliente() == d.getId_cliente()) {
+                                            out.print("<option value=" + p.getId_cliente() + " selected>" + p.getApellidos() + " " + p.getNombres() + " </option>");
+                                        } else {
+                                            out.print("<option value=" + p.getId_cliente() + ">" + p.getApellidos() + " " + p.getNombres() + " </option>");
+                                        }
+                                    } else {
+                                        out.print("<option value=" + p.getId_cliente() + ">" + p.getApellidos() + " " + p.getNombres() + " </option>");
+                                    }
+                                } while (it.hasNext());
+                            %>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label>Fecha *</label> 
+                        <input type='text' class='c-field' name='fecha' value='<%=d.getFecha()%>' id="popupDatepicker">
+                    </div>
+                </div>
 
-                <label>Fecha *</label> 
-                <input type='text' class='c-field' name='fecha' value='<%=d.getFecha()%>' id="popupDatepicker">
-                <label>Sub total*</label> 
-                <input type='text' class='c-field' name='sub_total' value='<%=d.getSub_total()%>'>
-                <label>Igv *</label> 
-                <input type='text' class='c-field' name='igv' value='<%=d.getIgv()%>'>
-                <label>Total *</label> 
-                <input type='text' class='c-field' name='total' value='<%=d.getTotal()%>'>
-                <label>Cliente *</label>
-                <select name="id_cliente" class="c-field">
-                    <%
-                        ClienteDAO cdao = new ClienteDAO();
-                        List list = cdao.listarCliente("");
-                        Iterator it = list.iterator();
-                        do {
-                            Cliente p = (Cliente) it.next();
-                            if (go.equals("Editar")) {
-                                if (p.getId_cliente() == d.getId_cliente()) {
-                                    out.print("<option value=" + p.getId_cliente() + " selected>" + p.getApellidos() + " " + p.getNombres() + " </option>");
-                                } else {
-                                    out.print("<option value=" + p.getId_cliente() + ">" + p.getApellidos() + " " + p.getNombres() + " </option>");
-                                }
-                            } else {
-                                out.print("<option value=" + p.getId_cliente() + ">" + p.getApellidos() + " " + p.getNombres() + " </option>");
-                            }
-                        } while (it.hasNext());
-                    %>
-                </select>
+                <div class="row">
+                    <div class="col-8"></div>
+                    <div class="col-4">
+                        <div class="row">
+                            <label class="col-4">Sub total*</label> 
+                            <input type='text' class='c-field col-8' name='sub_total' value='<%=d.getSub_total()%>'>
+                        </div>
+                        <div class="row">
+
+                            <label class="col-4">Igv *</label>
+                            <input type='text' class='c-field col-8' name='igv' value='<%=d.getIgv()%>'>
+                        </div>
+                        <div class="row">
+
+                            <label class="col-4">Total *</label> 
+                            <input type='text' class='c-field col-8' name='total' value='<%=d.getTotal()%>'>
+                        </div>
+                    </div>
+                </div>
+
+
 
                 <!--botones del formulario-->
-                <input type='submit' value='<%= go%>'>
+                <input type='submit' class="btn btn-default btn-sm"  value='<%= go%>'>
                 <% if (go.equals("Editar")) {
-                        out.print("<input type='button'  value='Eliminar' onclick='eliminarConfirm();'>");
+                        out.print("<input type='button'  class='btn btn-default btn-sm' value='Eliminar' onclick='eliminarConfirm();'>");
                     }%>
-                <input type='button' value='Cancelar' onclick='cancelar()'>
+                    <input type='button' class="btn btn-default btn-sm"  value='Cancelar' onclick='cancelar()'>
             </form>
         </div>
         <%

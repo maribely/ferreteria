@@ -46,9 +46,6 @@ textarea{
     border-right-width: 1px;
 }
 
-.btn {
-    font-family: Verdana, sans-serif;
-}
 .btn_font_max {
 
     background-image: url(../icono/fontMax.gif); background-repeat: no-repeat;
@@ -117,13 +114,6 @@ xbtns {
     border-right-width: 1px;
 
 }
-
-.btn{
-    font-size: 95%;
-    FONT-FAMILY: Geneva, Arial, Helvetica, san-serif;
-    FONT-FAMILY: verdana, arial, helvetica, sans-serif; TEXT-DECORATION: none;
-}
-
 
 .notxt {
     border: 0px;

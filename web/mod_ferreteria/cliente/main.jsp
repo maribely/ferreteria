@@ -32,7 +32,7 @@
                     if (it.hasNext()) {
         %>
         <!--        formulario crear/editar-->
-        <form action="form.jsp" method="POST" name="resultado_form" class="center">
+        <form action="form.jsp" method="POST" name="resultado_form" class="center" onsubmit="return editar()">
             <label class="text-acent">Elige una opción</label>
             <hr>
             <input type="hidden" name="go" value="Editar">            
@@ -80,6 +80,13 @@
         function nuevo() {
             document.resultado_form.go.value = 'Crear';
             document.resultado_form.submit();
+        }
+        function editar() {
+            if (document.resultado_form.id_cliente.value === '') {
+                alert('Escoja una opción por favor');
+                return false;
+            }
+            return true;
         }
         function enter() {
             if (window.event)

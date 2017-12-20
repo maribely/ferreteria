@@ -32,7 +32,7 @@
                     if (it.hasNext()) {
         %>
         <!--        formulario crear/editar-->
-        <form action="form.jsp" method="POST" name="resultado_form" class="center">
+        <form action="form.jsp" method="POST" name="resultado_form" class="center" onsubmit="return editar()">
             <label class="text-acent">Elige una opción</label>
             <hr>
             <input type="hidden" name="go" value="Editar">            
@@ -41,7 +41,7 @@
                     do {
                         i++;
                         Categoria d = (Categoria) it.next();
-                        out.print("<option value=" + d.getId_categoria()+ ">" + d.getNombre()+ " </option>");
+                        out.print("<option value=" + d.getId_categoria() + ">" + d.getNombre() + " </option>");
                     } while (it.hasNext());
                 %>
             </select>
@@ -49,7 +49,7 @@
             <button type="button" onclick='nuevo()'>Nuevo</button>
             <input type='submit' value='Editar'>
         </form>
-            
+
         <%
                 } else {
                     out.print("<br><br><b>B&uacute;squeda sin &eacute;xito, vuelva a intentar de la forma:</b>"
@@ -74,31 +74,5 @@
         %> 
 
     </body>
-    <script>
-        function listar() {
-            document.bus_fm.action = 'list.jsp';
-            document.bus_fm.submit();
-        }
-        function focus_on_filter() {
-            document.bus_fm.filter.select();
-        }
-        function nuevo() {
-            document.resultado_form.go.value = 'Crear';
-            document.resultado_form.submit();
-        }
-        function enter() {
-            if (window.event)
-                keycd = window.event.keyCode;
-            else if (evnt && evnt.which)
-                keycd = evnt.which;
-            else
-                return;
-            if (keycd === 13)
-                document.resultado_form.submit();
-        }
-        if (document.captureEvents) {
-            document.captureEvents(Event.KEYPRESS);
-            document.onkeypress = enter;
-        }
-    </script>
+    <script src="../../recurso/js/functions.js"></script>
 </html>
