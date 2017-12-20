@@ -25,10 +25,6 @@
             String go = request.getParameter("go") == null ? "" : request.getParameter("go");
             String id = request.getParameter("id") == null ? "" : request.getParameter("id");
             Producto d = new Producto();
-            System.out.println("#=====///====");
-            System.out.println("id_prove:" + d.getId_proveedor());
-            System.out.println("id_categ:" + d.getId_categoria());
-            System.out.println("#=====///====");
             String titulo = go + " " + d.getClass().getSimpleName();
             try {
                 if (go.equals("Editar")) {
