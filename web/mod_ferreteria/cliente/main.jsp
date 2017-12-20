@@ -36,7 +36,7 @@
             <label class="text-acent">Elige una opción</label>
             <hr>
             <input type="hidden" name="go" value="Editar">            
-            <select name="id_cliente"  size="10">
+            <select name="id"  size="10">
                 <%
                     do {
                         i++;
@@ -69,38 +69,5 @@
         %> 
 
     </body>
-    <script>
-        function listar() {
-            document.bus_fm.action = 'list.jsp';
-            document.bus_fm.submit();
-        }
-        function focus_on_filter() {
-            document.bus_fm.filter.select();
-        }
-        function nuevo() {
-            document.resultado_form.go.value = 'Crear';
-            document.resultado_form.submit();
-        }
-        function editar() {
-            if (document.resultado_form.id_cliente.value === '') {
-                alert('Escoja una opción por favor');
-                return false;
-            }
-            return true;
-        }
-        function enter() {
-            if (window.event)
-                keycd = window.event.keyCode;
-            else if (evnt && evnt.which)
-                keycd = evnt.which;
-            else
-                return;
-            if (keycd === 13)
-                document.res_fm.submit();
-        }
-        if (document.captureEvents) {
-            document.captureEvents(Event.KEYPRESS);
-            document.onkeypress = enter;
-        }
-    </script>
+    <script src = "../../recurso/js/functions.js" ></script>
 </html>

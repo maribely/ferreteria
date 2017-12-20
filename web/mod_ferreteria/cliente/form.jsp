@@ -23,7 +23,7 @@
     </head>
     <body class="c-container-short">
         <%            String go = request.getParameter("go") == null ? "" : request.getParameter("go");
-            String id_cliente = request.getParameter("id_cliente") == null ? "" : request.getParameter("id_cliente");
+            String id_cliente = request.getParameter("id") == null ? "" : request.getParameter("id");
             try {
                 Cliente cliente = new Cliente();
                 // ubigeo = new Ubigeo();
