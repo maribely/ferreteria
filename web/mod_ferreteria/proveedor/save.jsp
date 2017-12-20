@@ -4,8 +4,8 @@
     Author     : hikaru
 --%>
 <%@ include file="../../include.jsp" %>
-<%@page import="org.submit.ferreteria.dao.CategoriaDAO"%>
-<%@page import="org.submit.ferreteria.entity.Categoria"%>
+<%@page import="org.submit.ferreteria.dao.ProveedorDAO"%>
+<%@page import="org.submit.ferreteria.entity.Proveedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,8 +18,8 @@
         if (request.getSession().getAttribute("usuario_id") == null) {
             throw new GlobalException("La operación requiere el usuario que registra. Sesion auto terminada, vuelva a ingresar");
         }
-        Categoria d = new Categoria();
-        CategoriaDAO dao = new CategoriaDAO();
+        Proveedor d = new Proveedor();
+        ProveedorDAO dao = new ProveedorDAO();
         String go = request.getParameter("go") == null ? "" : request.getParameter("go");
         int id = request.getParameter("id") == null ? 0 : Integer.parseInt(request.getParameter("id"));
         String mensaje = ""+d.getClass().getSimpleName();
@@ -34,18 +34,22 @@
         }
         if (go.equals("Crear")) {
             try {
-                d.setNombre(request.getParameter("nombre"));
+                d.setRazon_social(request.getParameter("razon_social"));
+                d.setRuc(request.getParameter("ruc"));
+                d.setDireccion(request.getParameter("direccion"));
                 dao.create(d);
-                mensaje += " '" + d.getNombre() + "' registrado con éxito";
+                mensaje += " '" + d.getRazon_social()+ "' registrado con éxito";
             } catch (GlobalException e) {
                 throw new GlobalException(e.getMessage());
             }
         } else if (go.equals("Editar")) {
             try {
-                d.setNombre(request.getParameter("nombre"));
-                d.setId_categoria(id);
+                d.setRazon_social(request.getParameter("razon_social"));
+                d.setRuc(request.getParameter("ruc"));
+                d.setDireccion(request.getParameter("direccion"));
+                d.setId_proveedor(id);
                 dao.update(d);
-                mensaje += " '" + d.getNombre() + "' actualizado con éxito";
+                mensaje += " '" + d.getRazon_social()+ "' actualizado con éxito";
             } catch (GlobalException e) {
                 throw new GlobalException(e.getMessage());
             }

@@ -3,10 +3,9 @@
     Created on : 18/12/2017, 11:39:41 PM
     Author     : hikaru
 --%>
-<%@ page errorPage="../../error.jsp" %>
+<%@ include file="../../include.jsp" %>
 <%@page import="org.submit.ferreteria.dao.ClienteDAO"%>
 <%@page import="org.submit.ferreteria.entity.Cliente"%>
-<%@page import="org.submit.ferreteria.common.data.GlobalException"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

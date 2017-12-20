@@ -15,7 +15,7 @@ public class Producto {
     String nombre = "";
     float precio_unitario;
     float stock;
-    String descripcion = "";
+    String descripcion = "Descripción";
     int id_proveedor;
     int id_categoria;
 

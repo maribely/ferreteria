@@ -5,8 +5,8 @@
 --%>
 
 <%@ include file="../../include.jsp" %>
-<%@page import="org.submit.ferreteria.entity.Categoria"%>
-<%@page import="org.submit.ferreteria.dao.CategoriaDAO"%>
+<%@page import="org.submit.ferreteria.entity.Producto"%>
+<%@page import="org.submit.ferreteria.dao.ProductoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,22 +17,22 @@
     </head>
     <body class="c-container">
         <div class="center">
-            <h2 class="text-warm">Reporte de categorias</h2>
+            <h2 class="text-warm">Lista de Productos</h2>
             <input type='button' class='btn_font_min' value=' ' onclick="font_size('articulo', false)">
             <input type='button' class='btn_font_max' value=' ' onclick="font_size('articulo', true)">
         </div>
         <div class="c-form-container">
             <table border='0' id="articulo"  cellspacing='2' cellpadding='1' align="center" >
                 <tr>
-                    <th># </th><th>Nombre</th>
+                    <th># </th><th>Nombre</th><th>Stock</th><th>Precio unitario</th>
                 </tr>
                 <%  int i = 0;
                     try {
-                        CategoriaDAO dao = new CategoriaDAO();
+                        ProductoDAO dao = new ProductoDAO();
                         List lis = dao.list("");
                         Iterator lisIterator = lis.iterator();
                         while (lisIterator.hasNext()) {
-                            Categoria d = (Categoria) lisIterator.next();
+                            Producto d = (Producto) lisIterator.next();
                 %>
                 <tr <% if (i % 2 != 0) {
                         out.print("class='intercalar'");
@@ -41,10 +41,12 @@
                     onClick="rollIn(this)" onDblClick="limpiar(this)" onMouseOver="rollIn(this)" onMouseOut="rollOut(this)" >
                     <td align="right"><i><%=++i%></i></td>
                     <td><%=d.getNombre()%></td>
+                    <td><%=d.getStock()%></td>
+                    <td><%=d.getPrecio_unitario()%></td>
                 </tr>
                 <%      }
                     } catch (GlobalException e) {
-                        throw new GlobalException("" + e.getMessage());
+                        throw new GlobalException(e.getMessage());
                     }
                     if (i == 0) {
                         out.print("<br><br><b>0 Registros Encontrados</b>");
