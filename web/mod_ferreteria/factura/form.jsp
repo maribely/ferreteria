@@ -75,13 +75,10 @@
                 <div class="row">
                     <div class="col-4">
                         <label>Producto *</label>
-                        <select name="id_producto" class="c-field"  size="6">
+                        <select name="id_producto" id="id_producto" class="c-field"  size="6">
                             <%
                                 ProductoDAO prodao = new ProductoDAO();
                                 List lista = prodao.list("");
-                                System.out.print("#########");
-                                System.out.print(lista);
-
                                 Iterator it2 = lista.iterator();
                                 if (it2.hasNext()) {
                                     do {
@@ -89,42 +86,25 @@
                                         out.print("<option value=" + pro.getId_producto() + ">" + pro.getNombre() + " </option>");
                                     } while (it2.hasNext());
                                 }
-
                             %>
                         </select>
                     </div>
                     <div class="col-3">
                         <label>Cantidad *</label> 
-                        <input type='number' class='c-field' name='cantidad' value=''>
+                        <input type='number' class='c-field' name='cantidad' id='cantidad' value=''>
                     </div>
                     <div class="col-3">
                         <label>Sub total *</label> 
-                        <input type='number' class='c-field' name='sub_total' value=''>
+                        <input type='number' class='c-field' name='sub_total' id='sub_total' value=''>
                     </div>
                     <div class="col-2">
                         <br><br>
-                        <input type='button' class="btn btn-default btn-sm"  value='Agregar'>
+                        <input type='button' id="btn-agregar" class="btn btn-default btn-sm"  value='Agregar'>
                     </div>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
+                <script src="detail_ajax.js"></script>
+                <div id="response"></div>
 
-                            <th>#</th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Sub total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Fierro</td>
-                            <td>4</td>
-                            <td>88.6</td>
-                        </tr>
-                    </tbody>
-                </table>
                 <hr>
                 <div class="row">
                     <div class="col-8"></div>
@@ -143,8 +123,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
                 <!--botones del formulario-->
                 <input type='submit' class="btn btn-default btn-sm"  value='<%= go%>'>
