@@ -83,7 +83,7 @@
                             } else {
                                 out.print("<option value=" + c.getId_categoria() + ">" + c.getNombre() + " </option>");
                             }
-                        } while (it.hasNext());
+                        } while (it1.hasNext());
                     %>
                 </select>
 

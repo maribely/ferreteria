@@ -71,7 +71,6 @@
                     </div>
                 </div>
                 <h4 class="text-primary">Detalle factura</h4>
-                <hr>
                 <div class="row">
                     <div class="col-4">
                         <label>Producto *</label>
@@ -89,15 +88,11 @@
                             %>
                         </select>
                     </div>
-                    <div class="col-3">
+                    <div class="col-5">
                         <label>Cantidad *</label> 
                         <input type='number' class='c-field' name='cantidad' id='cantidad' value=''>
                     </div>
                     <div class="col-3">
-                        <label>Sub total *</label> 
-                        <input type='number' class='c-field' name='sub_total' id='sub_total' value=''>
-                    </div>
-                    <div class="col-2">
                         <br><br>
                         <input type='button' id="btn-agregar" class="btn btn-default btn-sm"  value='Agregar'>
                     </div>

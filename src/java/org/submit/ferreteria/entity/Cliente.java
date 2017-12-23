@@ -10,15 +10,15 @@ package org.submit.ferreteria.entity;
  * @author SISTEMAS
  */
 public class Cliente {
-    int id_cliente;
-    String nombres = "";
-    String apellidos = "";
-    String dni = "";
-    String sexo = "";
-    String email = "";
-    String ruc = "";
-    String telefono = "";
-    String direccion = "";
+    private int id_cliente;
+    private String nombres = "";
+    private String apellidos = "";
+    private String dni = "";
+    private String sexo = "";
+    private String email = "";
+    private String ruc = "";
+    private String telefono = "";
+    private String direccion = "";
 
     public Cliente() {
     }

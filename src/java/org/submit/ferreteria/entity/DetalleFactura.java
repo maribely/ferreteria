@@ -10,11 +10,14 @@ package org.submit.ferreteria.entity;
  * @author hikaru
  */
 public class DetalleFactura {
-    int id;
-    int id_producto;
-    float cantidad;
-    float sub_total;
-    int id_factura;
+
+    private int id;
+    private int id_producto;
+    private float cantidad;
+    private float sub_total;
+    private int id_factura;
+    private Producto producto;
+    private Factura factura;
 
     public DetalleFactura() {
     }
@@ -58,5 +61,21 @@ public class DetalleFactura {
     public void setId_factura(int id_factura) {
         this.id_factura = id_factura;
     }
-    
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public Factura getFactura() {
+        return factura;
+    }
+
+    public void setFactura(Factura factura) {
+        this.factura = factura;
+    }
+
 }

@@ -23,7 +23,10 @@
         String go = request.getParameter("go") == null ? "" : request.getParameter("go");
         int id = request.getParameter("id") == null ? 0 : Integer.parseInt(request.getParameter("id"));
         String mensaje = ""+d.getClass().getSimpleName();
-
+        System.out.println("===Producto save===");
+        System.out.println(request);
+        System.out.println("===Producto save sesion===");
+        System.out.println(request.getSession().getAttribute("carrito"));
         if (go.equals("Eliminar")) {
             try {
                 dao.delete(id);

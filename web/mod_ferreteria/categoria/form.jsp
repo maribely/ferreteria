@@ -22,9 +22,6 @@
             String id = request.getParameter("id") == null ? "" : request.getParameter("id");
             Categoria d = new Categoria();
             String titulo = go + " " + d.getClass().getSimpleName();
-            System.out.println("=====////=====");
-            System.out.println(request);
-            System.out.println("=====////=====");
             try {
                 if (go.equals("Editar")) {
                     CategoriaDAO dao = new CategoriaDAO();

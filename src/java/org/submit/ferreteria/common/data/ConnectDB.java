@@ -1,7 +1,5 @@
 package org.submit.ferreteria.common.data;
 
-
-
 import java.sql.*;
 //import com.microsoft.sqlserver.jdbc.*;
 
@@ -21,20 +19,20 @@ public class ConnectDB {
         this.password = Config.PASSWORD;
         this.db_name = Config.DB_NAME;
     }
-  
+
     public Connection getConnection() throws GlobalException {
 
         if (conn == null) {
             try {//obtener conexion
                 //String sc="jdbc:sqlserver://localhost:1433;databaseName=Omaped;user=sa;password=12345;";
-		//Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+                //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 //                    String sc="jdbc:postgresql://localhost:5432/ferreteria?user=postgres&password=61580745"; // viene ser la contraseaña de posgre
 //                    Class.forName("org.postgresql.Driver");
-                  String sc="jdbc:mysql://localhost:3306/ferreteriadb?user=root&password=123456";
-                  Class.forName("com.mysql.jdbc.Driver");
+                String sc = "jdbc:mysql://localhost:3306/ferreteriadb?user=root&password=123456";
+                Class.forName("com.mysql.jdbc.Driver");
                 //String sc="jdbc:oracle:thin:@//localhost:1521:ora11i?user=scott&password=tiger";//Thin driver
                 //Class.forName ("oracle.jdbc.driver.OracleDriver");
-                    conn = DriverManager.getConnection(sc);
+                conn = DriverManager.getConnection(sc);
 //                SQLServerDataSource ds = new SQLServerDataSource(); //para que soporte pool
 //                //ds.setIntegratedSecurity(true);
 //                ds.setServerName(server);
@@ -44,8 +42,8 @@ public class ConnectDB {
 //                ds.setPassword(password);
 //                conn = ds.getConnection();
 
-                System.out.println("Connect to " + server + ":" + port + " " + db_name + " " +
-                        username + " " + (new java.text.SimpleDateFormat("yyyy-MM-dd hh:m a").format(new java.util.Date())));
+                System.out.println("Connect to " + server + ":" + port + " " + db_name + " "
+                        + username + " " + (new java.text.SimpleDateFormat("yyyy-MM-dd hh:m a").format(new java.util.Date())));
 
             } catch (Exception e) {
                 throw new GlobalException("ConnectDB.getConnection " + e.getMessage());
@@ -77,15 +75,14 @@ public class ConnectDB {
             Statement stmt = sql.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(SQL);
             while (rs.next()) {
-                System.out.println("==> "+ rs.getString("usuario")+" conectado!!!");
+                System.out.println("==> " + rs.getString("usuario") + " conectado!!!");
             }
-            sql.close();  
+            sql.close();
             sql.getConnection();
             sql.close();
         } catch (Exception e) {
             System.out.println("Error:" + e.getMessage());
         }
-
-
     }
+
 }

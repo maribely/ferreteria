@@ -11,8 +11,8 @@ package org.submit.ferreteria.entity;
  */
 public class Categoria {
 
-    int id_categoria;
-    String nombre="";
+    private int id_categoria;
+    private String nombre="";
 
     public Categoria() {
     }
